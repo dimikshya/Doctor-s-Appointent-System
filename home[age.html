@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline styles for prototyping */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .header-container, .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .specialty-card, .doctor-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+        }
+        .specialty-cards, .doctor-cards {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.jpg" alt="Doctor Appointment Logo" width="150"></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="patients.html">Patient Portal</a></li>
+                </ul>
+            </nav>
+            <div class="contact">
+                <p><i class="fas fa-phone-alt"></i> +8801538467596</p>
+            </div>
+            <div class="header-buttons">
+                <a href="appointment.html" class="btn btn-primary">Schedule Appointment</a>
+                <a href="login.html" class="btn btn-secondary">Sign In / Register</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <h2>Find Your Doctor and Book Instantly</h2>
+            <p>Browse top-rated doctors, clinics, and hospitals in your area and book an appointment with ease.</p>
+            <div class="search-bar">
+                <select>
+                    <option>Kathmandu</option>
+                    <option>Pokhara</option>
+                    <option>Birgunj</option>
+                </select>
+                <input type="text" placeholder="Search by doctor, specialty, clinic, etc.">
+                <button class="btn btn-search">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic and Specialties Section -->
+    <section class="specialties">
+        <div class="container">
+            <h2>Explore Our Specialties</h2>
+            <div class="specialty-cards">
+                <div class="specialty-card">
+                    <img src="urology.jpeg" alt="Urology Specialty">
+                    <p>Urology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="neurology.jpg" alt="Neurology Specialty">
+                    <p>Neurology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="orthopedic.jpg" alt="Orthopedic Specialty">
+                    <p>Orthopedics</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="cardiology.jpg" alt="Cardiology Specialty">
+                    <p>Cardiology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="dentist.jpg" alt="Dental Specialty">
+                    <p>Dentistry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Our Doctor Section -->
+    <section class="book-doctor">
+        <div class="container">
+            <h2>Meet Our Top Doctors</h2>
+            <p>Our team of experienced doctors is here to provide you with the best medical care. Select a doctor below to learn more and book an appointment.</p>
+            <div class="doctor-cards">
+                <div class="doctor-card">
+                    <img src="doctor1.jpeg" alt="Doctor Sumaiya Islam">
+                    <h3>Dr. Sumaiya Islam</h3>
+                    <p>MDS - Periodontology and Oral Implantology, BDS</p>
+                    <p>Rating: ★★★★☆ (7 Reviews)</p>
+                    <a href="doctor-profile.html" class="btn btn-view">View Profile</a>
+                    <a href="book-appointment.html" class="btn btn-book">Book Appointment</a>
+                </div>
+                <div class="doctor-card">
+                    <img src="doctor2.png" alt="Doctor Bikash Shah">
+                    <h3>Dr. Bikash Shah</h3>
+                    <p>BDS, MDS - Oral & Maxillofacial Surgery</p>
+                    <p>Rating: ★★★☆☆ (5 Reviews)</p>
+                    <a href="doctor-profile.html" class="btn btn-view">View Profile</a>
+                    <a href="book-appointment.html" class="btn btn-book">Book Appointment</a>
+                </div>
+                <div class="doctor-card">
+                    <img src="doctor3.jpeg" alt="Doctor Rabeya Paudel">
+                    <h3>Dr. Rabeya Paudel</h3>
+                    <p>MBBS, MD - General Medicine, DNB - Cardiology</p>
+                    <p>Rating: ★★★★☆ (12 Reviews)</p>
+                    <a href="doctor-profile.html" class="btn btn-view">View Profile</a>
+                    <a href="book-appointment.html" class="btn btn-book">Book Appointment</a>
+                </div>
+                <div class="doctor-card">
+                    <img src="doctor4.jpg" alt="Doctor Sofia Regmi">
+                    <h3>Dr. Sofia Regmi</h3>
+                    <p>MBBS, MS - General Surgery, Urology</p>
+                    <p>Rating: ★★★☆☆ (9 Reviews)</p>
+                    <a href="doctor-profile.html" class="btn btn-view">View Profile</a>
+                    <a href="book-appointment.html" class="btn btn-book">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About BookMyDoctor</h3>
+                <p>BookMyDoctor is your go-to platform for finding and booking appointments with the best doctors in your area. We aim to make healthcare accessible and convenient for everyone.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h4>For Patients</h4>
+                <ul>
+                    <li><a href="#">Find a Doctor</a></li>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Create Account</a></li>
+                    <li><a href="#">Manage Bookings</a></li>
+                    <li><a href="#">Patient Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h4>For Doctors</h4>
+                <ul>
+                    <li><a href="#">View Appointments</a></li>
+                    <li><a href="#">Doctor Login</a></li>
+                    <li><a href="#">Doctor Registration</a></li>
+                    <li><a href="#">Doctor Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Baghbazar, Kathmandu</li>
+                    <li><i class="fas fa-phone-alt"></i> +1 234 567 890</li>
+                    <li><i class="fas fa-envelope"></i> info@bookmydoctor.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BookMyDoctor. All rights reserved. <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Example script for prototype interactions
+        document.querySelectorAll('.btn-view').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('Viewing profile of ' + this.parentNode.querySelector('h3').textContent);
+            });
+        });
+
+        document.querySelectorAll('.btn-book').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('Booking appointment with ' + this.parentNode.querySelector('h3').textContent);
+            });
+        });
+    </script>
+</body>
+</html>

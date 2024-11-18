@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background color for the page */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between contact and button */
+}
+
+.contact p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.header-buttons .btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #00d4ff;
+}
+
+/* Register Section */
+.register-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #e0f7fa; /* Light blue background color for the section */
+}
+
+.register-container {
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.register-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto; /* Ensure the image scales correctly */
+}
+
+.register-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-form a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 10px;
+    background-color: #00d4ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-register {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-register .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+}
+
+.btn-google {
+    background-color: #db4437;
+}

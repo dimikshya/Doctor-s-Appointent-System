@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - BookMy Doctor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="appointmentstyles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('appointment.php')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.querySelector('table');
+                    const tbody = document.createElement('tbody');
+
+                    data.forEach(appointment => {
+                        const row = document.createElement('tr');
+
+                        const doctorNameCell = document.createElement('td');
+                        doctorNameCell.textContent = appointment.doctor_name;
+                        row.appendChild(doctorNameCell);
+
+                        const patientNameCell = document.createElement('td');
+                        patientNameCell.textContent = appointment.patient_name;
+                        row.appendChild(patientNameCell);
+
+                        const appointmentTimeCell = document.createElement('td');
+                        const appointmentDate = new Date(appointment.appointment_time);
+                        appointmentTimeCell.innerHTML = appointmentDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }) + '<br>' + appointmentDate.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+                        row.appendChild(appointmentTimeCell);
+
+                        const paymentStatusCell = document.createElement('td');
+                        paymentStatusCell.textContent = appointment.payment_status.charAt(0).toUpperCase() + appointment.payment_status.slice(1);
+                        row.appendChild(paymentStatusCell);
+
+                        const amountCell = document.createElement('td');
+                        amountCell.textContent = parseFloat(appointment.amount).toFixed(2);
+                        row.appendChild(amountCell);
+
+                        tbody.appendChild(row);
+                    });
+
+                    table.appendChild(tbody);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>BookMy Doctor</h2>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="appointment.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+                <li><a href="#"><i class="fas fa-user-md"></i> Doctors</a></li>
+                <li><a href="#"><i class="fas fa-procedures"></i> Patients</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="transaction.php"><i class="fas fa-file-invoice-dollar"></i> Transactions</a></li>
+                <li><a href="profile.php"><i class="fas fa-user-cog"></i> Profile</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Appointments</h1>
+                <nav>
+                    <span>Dashboard</span> / <span>Appointments</span>
+                </nav>
+            </div>
+            <div class="table-section">
+                <h2>Appointment List</h2>
+                <div class="table-controls">
+                    <label for="entries">Show</label>
+                    <select id="entries" name="entries">
+                        <option value="10">5</option>
+                        <option value="25">10</option>
+                        <option value="50">15</option>
+                        <option value="100">20</option>
+                    </select>
+                    <span>entries</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Doctor Name</th>
+                            <th>Patient Name</th>
+                            <th>Appointment Time</th>
+                            <th>Payment Status</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <!-- JavaScript will populate this tbody -->
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

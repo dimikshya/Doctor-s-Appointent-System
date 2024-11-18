@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 200px; /* Reduced width */
+    background: #ADD8E6; /* Light Blue Color */
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a.active, 
+.sidebar ul li a:hover {
+    background-color: #87CEFA; /* Lighter blue background on hover or when active */
+    color: white; /* Ensure the text color remains white on hover or when active */
+}
+
+.content {
+    margin-left: 220px; /* Adjust margin to account for smaller sidebar */
+    padding: 20px;
+}
+
+.profile-header {
+    margin-bottom: 20px;
+}
+
+.profile-header h2 {
+    margin: 0;
+}
+
+.profile-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-photo img {
+    width: 80px; /* Small photo */
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.edit-photo-button {
+    color: #00aaff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.edit-photo-button:hover {
+    text-decoration: underline;
+}
+
+.personal-details {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.personal-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.personal-details ul li {
+    margin-bottom: 10px;
+}
+
+.personal-details a.edit-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.edit-button:hover {
+    background: #0088cc;
+}
+
+.password-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.update-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.update-button:hover {
+    background: #0088cc;
+}
